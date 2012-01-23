@@ -182,13 +182,15 @@ sub DESTROY {
 __DATA__
 =head1 NAME
 
-Audio::C4Stream::Wav - Perl extension for open and streaming WAV files.
+Audio::C4Stream::Wav - Perl extension for open and stream WAV files.
 
 =head1 SYNOPSIS
 
-  use Audio::C4Stream::Wav(
-  		filename            => $file,
-  	    leftTrimLen         => 5,5, #in seconds
+  use Audio::C4Stream::Wav;
+  
+  my $audio = new Audio::C4Stream::Wav(
+		filename            => $file,
+		leftTrimLen         => 5,5, #in seconds
 		rightTrimLen        => 5,5, #seconds
 		fadeInLen           => 10, #seconds
 		fadeOutLen          => 10, #seconds
@@ -203,28 +205,51 @@ Audio::C4Stream::Wav - Perl extension for open and streaming WAV files.
 
 The functions are :
 
-=over 2
-=item C<getPngData> get the sine wave graphic of the WAV data
-=item C<getNextData> get next data
-=item C<getNextRawData> get next source data
-=item C<getOrigDataLen> get the original data length
-=item C<getOrigSec> get the number of seconds of the original data
-=item C<getDataLen> get the length of the mixed data
-=item C<getSec> get the seconds of the data
+=over 7
+
+=item C<getPngData> 
+
+Get the sine wave graphic of the WAV data
+
+=item C<getNextData> 
+
+Get next data
+
+=item C<getNextRawData> 
+
+Get next source data
+
+=item C<getOrigDataLen> 
+
+Get the original data length
+
+=item C<getOrigSec> 
+
+Get the number of seconds of the original data
+
+=item C<getDataLen> 
+
+Get the length of the mixed data
+
+=item C<getSec> 
+
+Get the seconds of the data
+
+=back
 
 =head1 SEE ALSO
 
 See Audio::C4Stream::Mixer
-Depends on IO::Scalar
-Depends on C library GD L<https://bitbucket.org/pierrejoye/gd-libgd/overview>
+
+Depends on IO::Scalar and C library GD L<https://bitbucket.org/pierrejoye/gd-libgd/overview>
 
 =head1 AUTHOR
 
-C4PC, L<adeamara@cloud4pc.com>
+cloud4pc, L<adeamara@cloud4pc.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2012 by C4PC
+Copyright (C) 2012 by cloud4pc
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.1 or,

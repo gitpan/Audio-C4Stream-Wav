@@ -1,6 +1,6 @@
 Revision history for Perl extension Audio::C4Stream::Wav.
 
-0.01  Mon Jan 23 10:40:06 2012
-	- original version; created by h2xs 1.23 with options
-		-PAXn Audio::C4Stream::Wav
+1.00 First
+
+1.01 Improve documentation
 
